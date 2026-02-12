@@ -36,10 +36,10 @@ const Footer = () => {
               <a href="https://twitter.com/muzamilhussain" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full skill-tag-hover transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:text-[var(--color-primary)]">
                 <Twitter className="w-6 h-6" />
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full skill-tag-hover transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:text-[var(--color-primary)]">
+              <a href="https://www.facebook.com/profile.php?id=100087730677684" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full skill-tag-hover transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:text-[var(--color-primary)]">
                 <FaFacebookF className="w-6 h-6" />
               </a>
-              <a href="https://www.instagram.com/muzamilcreates?igsh=bWc4eWltc3E5aXpi" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full skill-tag-hover transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:text-[var(--color-primary)]">
+              <a href="https://www.instagram.com/muzamilcreates" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full skill-tag-hover transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:text-[var(--color-primary)]">
                 <Instagram className="w-6 h-6" />
               </a>
             </div>

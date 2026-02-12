@@ -56,7 +56,7 @@ const Education = () => {
                 <span className="text-xl font-semibold mb-1 text-gradient-static">
                   {edu.degree}
                 </span>
-                <p className="text-[var(--color-primary)] font-medium">{edu.institute}</p>
+                <p className="text-gray-200 text-xl font-bold">{edu.institute}</p>
                 <p className="text-sm text-[var(--color-text-secondary)] mt-1">{edu.period}</p>
               </div>
             </ScrollReveal>

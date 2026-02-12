@@ -13,11 +13,7 @@ const About = () => {
 
         <ScrollReveal direction="right" delay={200}>
           <p className="text-lg leading-8 text-gradient-paragraph">
-            I’m a BSCS student at the University of Sahiwal with hands-on experience in full-stack development.
-            My expertise lies in building scalable frontend applications using React.js, Next.js, and Tailwind CSS,
-            while also having a solid foundation in backend development with Node.js and Express.js.
-            I’ve deployed applications on Vercel, Netlify, AWS EC2, and Azure.
-            Recently, I’ve been exploring mobile development with React Native and advancing my knowledge in cybersecurity.
+            I am a results-driven MERN Stack Developer with a primary focus on creating high-performance, pixel-perfect user interfaces. With a year of hands-on experience, I specialize in translating complex designs into seamless web experiences using React.js and Next.js. As a frontend expert, I have a proven track record of implementing and managing a high volume of complex APIs using advanced state management tools like Redux Toolkit and React Query. While my core expertise lies in frontend architecture and mastering Advanced JavaScript, I also develop robust backend systems using Node.js to support full-stack project requirements. As a dedicated problem-solver, I excel at debugging and optimizing code to deliver secure, scalable, and visually precise digital solutions.
           </p>
         </ScrollReveal>
       </div>

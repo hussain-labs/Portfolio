@@ -3,6 +3,7 @@ import { Mail, Phone, Linkedin, Github } from "lucide-react";
 import { FaUpwork, FaStackOverflow } from "react-icons/fa6";
 import ContactForm from "./ContactForm";
 import ScrollReveal from "./ScrollReveal";
+import { SiLeetcode } from "react-icons/si";
 
 const Contact = () => {
   return (
@@ -34,8 +35,8 @@ const Contact = () => {
             <div className="space-y-4">
               <div className="flex items-center space-x-3 text-[var(--color-text-secondary)]">
                 <Mail className="w-6 h-6 text-[var(--color-primary)]" />
-                <a href="mailto:muzamilhussain369@gmail.com" className="text-gradient-static hover:underline">
-                  muzamilhussain369@gmail.com
+                <a href="mailto:im.muzamil.dev@gmail.com?subject=Inquiry from Portfolio" className="text-gradient-static hover:underline">
+                  im.muzamil.dev@gmail.com
                 </a>
               </div>
               <div className="flex items-center space-x-3 text-[var(--color-text-secondary)]">
@@ -48,17 +49,17 @@ const Contact = () => {
             <div className="flex space-x-4 mt-2">
 
               {/* --- ONLY THESE ICONS ARE CHANGED --- */}
-              <a href="https://www.linkedin.com/in/muzamil-hussain-990691375?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/muzamil-mern-stack-developer/" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="w-12 h-12 p-2 rounded-md social-icon-themed transition-all duration-300 ease-in-out cursor-pointer hover:shadow-lg hover:-translate-y-1" />
               </a>
-              <a href="https://github.com/muzamilhussain33" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/hussain-labs" target="_blank" rel="noopener noreferrer">
                 <Github className="w-12 h-12 p-2 rounded-md social-icon-themed transition-all duration-300 ease-in-out cursor-pointer hover:shadow-lg hover:-translate-y-1" />
               </a>
               <a href="https://stackoverflow.com/users/30405022/muzamil-hussain" target="_blank" rel="noopener noreferrer">
                 <FaStackOverflow className="w-12 h-12 p-2 rounded-md social-icon-themed transition-all duration-300 ease-in-out cursor-pointer hover:shadow-lg hover:-translate-y-1" />
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <FaUpwork className="w-12 h-12 p-2 rounded-md social-icon-themed transition-all duration-300 ease-in-out cursor-pointer hover:shadow-lg hover:-translate-y-1" />
+              <a href="https://leetcode.com/u/tj39MJoM3P/" target="_blank" rel="noopener noreferrer">
+                <SiLeetcode className="w-12 h-12 p-2 rounded-md social-icon-themed transition-all duration-300 ease-in-out cursor-pointer hover:shadow-lg hover:-translate-y-1" />
               </a>
 
             </div>

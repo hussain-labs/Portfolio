@@ -33,7 +33,7 @@ const HeroSection = () => {
 
           <ScrollReveal direction="up" delay={400}> {/* Wrapped p with ScrollReveal */}
             <p className="mt-6 md:mt-8 text-base md:text-xl text-gray-300 font-medium max-w-lg">
-              Junior MERN Stack Developer | React.js | Next.js | Node.js
+              MERN Stack Developer | React.js | Next.js | Node.js
             </p>
           </ScrollReveal>
 
