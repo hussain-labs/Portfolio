@@ -9,7 +9,7 @@ const HeroSection = () => {
       <Navbar />
       {/* Main Content */}
       {/* Main Content */}
-      <main className=" max-w-[1638px] mx-auto px-6 md:px-16 pt-32 flex flex-col lg:flex-row items-end justify-between gap-10 lg:gap-0">
+      <main className=" max-w-[1638px] mx-auto px-6 md:px-16 pt-50 flex flex-col lg:flex-row items-end justify-between gap-10 lg:gap-0">
 
         {/* Left Side: Text */}
         <div className="hero_left w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left z-20 mb-[15%]">
