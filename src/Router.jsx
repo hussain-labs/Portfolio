@@ -1,7 +1,8 @@
 import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
-import AdminDashboard from "./pages/AdminDashborad"; // Assuming you have this page
+import AdminDashboard from "./pages/AdminDashborad";
+import ProjectDetail from "./pages/ProjectDetail";
 
 // 1. Helper function to check Auth
 const checkAdminAuth = () => {
@@ -22,18 +23,22 @@ const ProtectedAdminRoute = ({ children }) => {
 
 const router = createBrowserRouter([
   {
-    path: '/', 
+    path: '/',
     element: <Home />
+  },
+  {
+    path: '/project/:id',
+    element: <ProjectDetail />
   },
   {
     path: '/api/admin-login',
     element: <Login />
   },
   {
-    path: '/admin', 
+    path: '/admin',
     element: (
       <ProtectedAdminRoute>
-        <AdminDashboard /> 
+        <AdminDashboard />
       </ProtectedAdminRoute>
     )
   }

@@ -35,13 +35,13 @@ const Contact = () => {
             <div className="space-y-4">
               <div className="flex items-center space-x-3 text-[var(--color-text-secondary)]">
                 <Mail className="w-6 h-6 text-[var(--color-primary)]" />
-                <a href="mailto:im.muzamil.dev@gmail.com?subject=Inquiry from Portfolio" className="text-gradient-static hover:underline">
-                  im.muzamil.dev@gmail.com
+                <a href="mailto:muzamilhusain.dev@gmail.com?subject=Inquiry from Portfolio" className="text-gradient-static hover:underline">
+                  muzamilhusain.dev@gmail.com
                 </a>
               </div>
               <div className="flex items-center space-x-3 text-[var(--color-text-secondary)]">
                 <Phone className="w-6 h-6 text-[var(--color-primary)]" />
-                <span className="text-gradient-static">0303-0458064</span>
+                <span className="text-gradient-static">+923030458064</span>
               </div>
             </div>
 

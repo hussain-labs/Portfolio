@@ -21,12 +21,12 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <ul className="hidden lg:flex space-x-4 xl:space-x-6 text-[14px] xl:text-[16px] text-[var(--color-text-secondary)] font-medium items-center text-gradient-animated">
-          <li><a href="#about" className="hover:text-[var(--color-primary)]">About</a></li>
-          <li><a href="#skills" className="hover:text-[var(--color-primary)]">Skills</a></li>
-          <li><a href="#projects" className="hover:text-[var(--color-primary)]">Projects</a></li>
-          <li><a href="#experience" className="hover:text-[var(--color-primary)]">Experience</a></li>
-          <li><a href="#education" className="hover:text-[var(--color-primary)]">Education</a></li>
-          <li><a href="#contact" className="hover:text-[var(--color-primary)]">Contact</a></li>
+          <li><a href="/#about" className="hover:text-[var(--color-primary)]">About</a></li>
+          <li><a href="/#skills" className="hover:text-[var(--color-primary)]">Skills</a></li>
+          <li><a href="/#projects" className="hover:text-[var(--color-primary)]">Projects</a></li>
+          <li><a href="/#experience" className="hover:text-[var(--color-primary)]">Experience</a></li>
+          <li><a href="/#education" className="hover:text-[var(--color-primary)]">Education</a></li>
+          <li><a href="/#contact" className="hover:text-[var(--color-primary)]">Contact</a></li>
           <li className="w-[293px] h-[56px] border-[3px] border-[var(--color-primary)] rounded-[15px] flex items-center justify-center text-[26px] font-[600] font-[Poppins] hover:bg-[var(--color-primary)] hover:text-[var(--color-background)] transition-all duration-300 ease-in-out download_button">
             {/* Desktop Download Button with Gradient */}
             <a
@@ -65,22 +65,22 @@ const Navbar = () => {
       >
         <ul className="flex flex-col items-center space-y-4 py-4 text-[var(--color-text-secondary)] font-medium ">
           <li className="opacity-0 menu-item-animate" style={{ animationDelay: '100ms' }}>
-            <a href="#about" className="hover:text-[var(--color-primary)]" onClick={() => setIsOpen(false)}>About</a>
+            <a href="/#about" className="hover:text-[var(--color-primary)]" onClick={() => setIsOpen(false)}>About</a>
           </li>
           <li className="opacity-0 menu-item-animate" style={{ animationDelay: '200ms' }}>
-            <a href="#skills" className="hover:text-[var(--color-primary)]" onClick={() => setIsOpen(false)}>Skills</a>
+            <a href="/#skills" className="hover:text-[var(--color-primary)]" onClick={() => setIsOpen(false)}>Skills</a>
           </li>
           <li className="" style={{ animationDelay: '300ms' }}>
-            <a href="#projects" className="hover:text-[var(--color-primary)]" onClick={() => setIsOpen(false)}>Projects</a>
+            <a href="/#projects" className="hover:text-[var(--color-primary)]" onClick={() => setIsOpen(false)}>Projects</a>
           </li>
           <li className="" style={{ animationDelay: '400ms' }}>
-            <a href="#experience" className="hover:text-[var(--color-primary)]" onClick={() => setIsOpen(false)}>Experience</a>
+            <a href="/#experience" className="hover:text-[var(--color-primary)]" onClick={() => setIsOpen(false)}>Experience</a>
           </li>
           <li className="" style={{ animationDelay: '500ms' }}>
-            <a href="#education" className="hover:text-[var(--color-primary)]" onClick={() => setIsOpen(false)}>Education</a>
+            <a href="/#education" className="hover:text-[var(--color-primary)]" onClick={() => setIsOpen(false)}>Education</a>
           </li>
           <li className="" style={{ animationDelay: '600ms' }}>
-            <a href="#contact" className="hover:text-[var(--color-primary)]" onClick={() => setIsOpen(false)}>Contact</a>
+            <a href="/#contact" className="hover:text-[var(--color-primary)]" onClick={() => setIsOpen(false)}>Contact</a>
           </li>
           <li className="w-full flex mx-auto opacity-0 menu-item-animate" style={{ animationDelay: '700ms' }}>
             {/* Mobile Download Button with Gradient */}
