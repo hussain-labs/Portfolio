@@ -41,7 +41,7 @@ const Contact = () => {
               </div>
               <div className="flex items-center space-x-3 text-[var(--color-text-secondary)]">
                 <Phone className="w-6 h-6 text-[var(--color-primary)]" />
-                <span className="text-gradient-static">+923030458064</span>
+                <span className="text-gradient-static">+92 303-0458064</span>
               </div>
             </div>
 
