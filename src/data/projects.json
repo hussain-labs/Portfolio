@@ -1,0 +1,170 @@
+[
+    {
+        "id": "portfolios",
+        "name": "Corporate & Personal Portfolios",
+        "role": "Frontend Developer",
+        "desc": "Custom portfolio websites for corporate clients.",
+        "overview": "Independently developed custom portfolio websites for corporate clients and individuals at CallBackCrew. Built responsive, high-performance interfaces using React.js and Tailwind CSS. Delivered modern UI/UX with reusable components and optimized performance.",
+        "company": "CallBackCrew",
+        "live": "https://muzamilhussain.netlify.app/",
+        "image": "/images/projects/portfolios/portfolio.png",
+        "tech": [
+            "React.js",
+            "Next.js",
+            "Tailwind CSS"
+        ],
+        "features": [
+            "Custom portfolio websites",
+            "High-performance interfaces",
+            "Modern UI/UX",
+            "Reusable components"
+        ],
+        "link": "#"
+    },
+    {
+        "id": "keystrokes",
+        "name": "KeyStrokes",
+        "role": "Frontend Developer",
+        "desc": "Web-Based Typing Test & Practice Application.",
+        "overview": "Independently designed and developed a typing practice application using React.js. Implemented typing analytics, local storage, and responsive user interfaces. Built reusable components and optimized user experience.",
+        "company": "Individual",
+        "live": "https://keystrokesjs.netlify.app/",
+        "image": "/images/projects/keystrokes/keystrrokes.png",
+        "tech": [
+            "React.js",
+            "JavaScript",
+            "Tailwind CSS",
+            "Local Storage"
+        ],
+        "features": [
+            "Typing practice application",
+            "Typing analytics",
+            "Local storage integration",
+            "Responsive user interfaces"
+        ],
+        "link": "#"
+    },
+    {
+        "id": "patient-management",
+        "name": "Patient Management System",
+        "role": "Full Stack Developer",
+        "desc": "Healthcare Appointment & Records Platform.",
+        "overview": "Developed a patient management system for eye specialists using the MERN Stack. Built secure backend APIs and intuitive interfaces for patient and appointment management. Implemented CRUD operations and responsive dashboards.",
+        "company": "CallBackCrew",
+        "live": "https://patientaappointmentmanagementsystem.netlify.app/",
+        "image": "/images/projects/patientmanagement/patient_management_system.png",
+        "tech": [
+            "React.js",
+            "Node.js",
+            "Express.js",
+            "MongoDB"
+        ],
+        "features": [
+            "Eye specialist management system",
+            "Secure backend APIs",
+            "Appointment management",
+            "CRUD operations & dashboards"
+        ],
+        "link": "#"
+    },
+    {
+        "id": "recyco-track",
+        "name": "Recyco Track",
+        "role": "Team Lead",
+        "desc": "AI-Powered Scrap management Platform.",
+        "overview": "Led development of an AI-powered scrap management platform with User, Admin, and Rider portals. Designed the MongoDB database schema and integrated the Gemini AI API for image analysis. Coordinated development while contributing to both frontend and backend implementation.",
+        "company": "CallBackCrew",
+        "live": "https://recycotrack.netlify.app/",
+        "image": "/images/projects/recycotrack/recycotrack.png",
+        "tech": [
+            "Gemini AI",
+            "Image Processing",
+            "React.js",
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "Tailwind CSS"
+        ],
+        "features": [
+            "User, Admin, and Rider portals",
+            "Gemini AI API for image analysis",
+            "Custom MongoDB schema design",
+            "Full-stack MERN implementation"
+        ],
+        "link": "#"
+    },
+    {
+        "id": "shinvo",
+        "name": "Shinvo",
+        "role": "Full Stack Developer",
+        "desc": "E-commerce web Application.",
+        "overview": "Developed responsive storefronts and admin dashboards using React.js and Tailwind CSS. Assisted backend development by implementing REST APIs and integrating frontend services. Improved UI responsiveness and optimized application performance.",
+        "company": "CallBackCrew",
+        "live": "https://shinvo.netlify.app/",
+        "image": "/images/projects/shinvo/shinvo.png",
+        "tech": [
+            "React.js",
+            "Tailwind CSS",
+            "REST APIs"
+        ],
+        "features": [
+            "Responsive storefronts",
+            "Admin dashboards",
+            "REST API integration",
+            "Optimized UI performance"
+        ],
+        "link": "#"
+    },
+    {
+        "id": "paychain",
+        "name": "PayChain",
+        "role": "Full Stack Developer",
+        "desc": "AI-Powered Decentralised Merchant Transaction Platform.",
+        "overview": "Developed a AI-Powered Web3-enabled merchant transaction platform using the MERN Stack and blockchain technologies. Integrated RAG and LLMs to enable AI-powered, context-aware transaction processing. Built secure backend APIs and connected the frontend with blockchain services.",
+        "company": "CallBackCrew",
+        "live": "https://paychainai.netlify.app/",
+        "image": "/images/projects/paychain/paychain.png",
+        "tech": [
+            "RAG",
+            "Web3",
+            "Blockchain",
+            "LLMs",
+            "React.js",
+            "Node.js",
+            "Express.js",
+            "MongoDB"
+        ],
+        "features": [
+            "Web3-enabled transactions",
+            "AI-powered context-aware processing",
+            "Blockchain integration",
+            "Secure backend APIs"
+        ],
+        "link": "#"
+    },
+    {
+        "id": "inzaar",
+        "name": "Inzaar (LMS)",
+        "role": "Team Lead",
+        "desc": "MERN Stack LMS with Student, Moderator, and Admin dashboards.",
+        "overview": "Led the development of a MERN Stack LMS with Student, Moderator, and Admin dashboards. Implemented role-based authentication, batch management, and course management features. Coordinated the development team and contributed to both frontend and backend development.",
+        "company": "CallBackCrew",
+        "live": "#",
+        "image": "/images/projects/inzaar/inzaar.png",
+        "tech": [
+            "React.js",
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "Redux Toolkit",
+            "Tailwind CSS"
+        ],
+        "features": [
+            "Role-based authentication",
+            "Batch management",
+            "Course management",
+            "Student, Moderator, and Admin dashboards"
+        ],
+        "link": "#"
+    }
+]

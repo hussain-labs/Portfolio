@@ -1,6 +1,6 @@
 import React from "react";
 import { Briefcase } from "lucide-react";
-import experiences from "../services/experience";
+import experiences from "../data/experience.json";
 import ScrollReveal from "./ScrollReveal";
 
 const Experience = () => {

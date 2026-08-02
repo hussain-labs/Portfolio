@@ -1,7 +1,7 @@
 import React from "react";
 import { FaTiktok, FaFacebookF } from "react-icons/fa";
 import { Twitter, Instagram } from "lucide-react";
-import projects from "../services/projects";
+import projects from "../data/projects.json";
 import logo from "../assets/images/logo.png";
 import ScrollReveal from "./ScrollReveal";
 

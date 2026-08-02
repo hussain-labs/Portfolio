@@ -1,6 +1,6 @@
 import React from "react";
 import ProjectsGrid from "./ProjectsGrid";
-import projects from "../services/projects";
+import projects from "../data/projects.json";
 import ScrollReveal from "./ScrollReveal";
 
 // --- Step 1: Create a helper function to calculate the color ---
@@ -74,9 +74,11 @@ const Projects = () => {
                   </span>
                   <p className="text-[var(--color-text-secondary)] mb-2">{project.desc}</p>
                   <p className="text-sm text-[var(--color-text-secondary)] mb-1">Role: {project.role}</p>
-                  <p className="text-sm text-[var(--color-text-secondary)] mb-3">
-                    <span className="font-semibold">Duration:</span> {project.date}
-                  </p>
+                  {project.company && (
+                    <p className="text-sm text-[var(--color-text-secondary)] mb-3">
+                      <span className="font-semibold">Organization:</span> {project.company}
+                    </p>
+                  )}
                 </div>
               </ScrollReveal>
             );

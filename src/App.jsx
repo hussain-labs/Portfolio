@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Home from "./pages/Home";
-import Login from "./pages/Login";
-import AdminDashboard from "./pages/AdminDashborad";
+
 import AppRouter from "./Router";
 import Loader from "./components/Loader";
 

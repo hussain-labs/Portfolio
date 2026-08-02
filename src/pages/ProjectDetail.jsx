@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
-import projects from "../services/projects";
+import projects from "../data/projects.json";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -100,10 +100,12 @@ const ProjectDetail = () => {
             <UserIcon className="w-3 h-3 md:w-4 md:h-4" /> 
             <span><span className="hidden sm:inline">Role: </span>{project.role}</span>
           </span>
-          <span className="inline-flex items-center gap-1.5 md:gap-2 bg-transparent text-[#B0B0B0] border border-[#B0B0B0] md:border-2 px-2.5 py-1 md:px-5 md:py-1.5 rounded-[12px] md:rounded-[15px] text-[10px] md:text-[0.85rem] font-medium font-['Poppins',sans-serif]">
-            <CalendarIcon className="w-3 h-3 md:w-4 md:h-4" /> 
-            <span><span className="hidden sm:inline">Timeline: </span>{project.date}</span>
-          </span>
+          {project.company && (
+            <span className="inline-flex items-center gap-1.5 md:gap-2 bg-transparent text-[#B0B0B0] border border-[#B0B0B0] md:border-2 px-2.5 py-1 md:px-5 md:py-1.5 rounded-[12px] md:rounded-[15px] text-[10px] md:text-[0.85rem] font-medium font-['Poppins',sans-serif]">
+              <CalendarIcon className="w-3 h-3 md:w-4 md:h-4" /> 
+              <span><span className="hidden sm:inline">Organization: </span>{project.company}</span>
+            </span>
+          )}
         </div>
 
         {/* Title & Short Intro */}

@@ -2,19 +2,7 @@ import React from "react";
 import { GraduationCap } from "lucide-react"; // nice education icon
 import ScrollReveal from "./ScrollReveal";
 
-// Education Data
-const education = [
-  {
-    degree: "BSCS",
-    institute: "University of Sahiwal",
-    period: "2022 – 2026 (Ongoing)",
-  },
-  {
-    degree: "FSc Pre-Engineering",
-    institute: "Govt Higher Secondary School 105/15-L, Mian Channu, Khanewal",
-    period: "2020 – 2022",
-  },
-];
+import education from "../data/education.json";
 
 const Education = () => {
   return (
@@ -57,7 +45,10 @@ const Education = () => {
                   {edu.degree}
                 </span>
                 <p className="text-gray-200 text-xl font-bold">{edu.institute}</p>
-                <p className="text-sm text-[var(--color-text-secondary)] mt-1">{edu.period}</p>
+                <p className="text-sm text-[var(--color-text-secondary)] mt-1 mb-1">{edu.period}</p>
+                {edu.details && (
+                  <p className="text-sm font-semibold text-gray-400 uppercase tracking-widest">{edu.details}</p>
+                )}
               </div>
             </ScrollReveal>
           ))}

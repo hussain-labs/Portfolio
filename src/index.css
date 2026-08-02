@@ -2,6 +2,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 120px; /* Accounts for the fixed navbar height */
 }
 
 /* Theme Variables */

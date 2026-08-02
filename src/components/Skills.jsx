@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { mainSkills } from "../services/skills";
-import { otherSkills } from "../services/skills";
+import skillsData from "../data/skills.json";
+const { mainSkills, otherSkills } = skillsData;
 import ScrollReveal from "./ScrollReveal";
 
 const ProgressBar = ({ level }) => {

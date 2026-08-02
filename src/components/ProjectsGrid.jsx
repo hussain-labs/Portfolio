@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import projects from "../services/projects";
+import projects from "../data/projects.json";
 import ScrollReveal from "./ScrollReveal";
 
 const ProjectsGrid = () => {
   return (
-    <section className="max-w-[1638px] mx-auto px-6 md:px-16 py-10">
+    <section className="py-10">
       <ScrollReveal direction="up">
         <h2 className="text-4xl font-extrabold mb-12 text-center text-gradient-animated-hero">
           All Projects
@@ -13,7 +13,7 @@ const ProjectsGrid = () => {
       </ScrollReveal>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {projects.map((project, i) => (
+        {[...projects].reverse().map((project, i) => (
           <ScrollReveal
             key={i}
             direction="up"
@@ -21,7 +21,7 @@ const ProjectsGrid = () => {
             className="flex flex-col bg-[#16181C] border border-[#3b82f6]/10 rounded-2xl shadow-lg hover:shadow-[0_0_25px_rgba(59,130,246,0.15)] hover:border-[#3b82f6]/30 overflow-hidden hover:-translate-y-2 transition-all duration-500 group/card"
           >
             {/* Project Image */}
-            <div className="relative h-56 overflow-hidden">
+            <div className="relative aspect-video overflow-hidden bg-[#0F1115]">
               {project.image ? (
                 <img
                   src={project.image}

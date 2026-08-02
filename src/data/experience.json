@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Full-Stack Engineer (Full-time)",
+    "company": "CallBackCrew",
+    "period": "Apr 2026 – Present",
+    "responsibilities": [
+      "Developed and maintained scalable MERN Stack web applications for production environments.",
+      "Built backend APIs, integrated third-party services, and maintained application databases.",
+      "Collaborated with designers and developers in an Agile environment, participating in code reviews and sprint planning.",
+      "Managed deployments using AWS EC2, PM2, Nginx, Git, and GitHub.",
+      "Followed clean coding practices and delivered scalable, maintainable solutions."
+    ]
+  },
+  {
+    "title": "Frontend Web Developer (Part-time)",
+    "company": "CallBackCrew",
+    "period": "Mar 2025 – Apr 2026",
+    "responsibilities": [
+      "Developed responsive user interfaces using React.js, Next.js, Tailwind CSS, HTML5, and CSS3.",
+      "Built reusable UI components and integrated frontend applications with REST APIs.",
+      "Worked closely with backend developers to deliver production-ready web applications."
+    ]
+  }
+]
