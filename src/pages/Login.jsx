@@ -51,7 +51,7 @@ export default function Login() {
       <div className="w-full max-w-md bg-[#16181C] rounded-2xl p-8 shadow-2xl border border-[#B0B0B0]/10 relative overflow-hidden">
         
         {/* Background Glow */}
-        <div className="absolute -top-20 -right-20 w-40 h-40 bg-[#CDFC31] opacity-5 blur-[80px] rounded-full pointer-events-none"></div>
+        <div className="absolute -top-20 -right-20 w-40 h-40 bg-[#3b82f6] opacity-5 blur-[80px] rounded-full pointer-events-none"></div>
 
         <div className="mb-8 text-center">
           <h1 className="text-3xl font-bold text-[#FFFFFF] mb-2">Welcome Back</h1>
@@ -71,7 +71,7 @@ export default function Login() {
             <label className="text-sm font-medium text-[#FFFFFF] ml-1">Email Address</label>
             <div className="relative group">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <Mail className={`h-5 w-5 transition-colors ${error ? 'text-red-500' : 'text-[#B0B0B0] group-focus-within:text-[#CDFC31]'}`} />
+                <Mail className={`h-5 w-5 transition-colors ${error ? 'text-red-500' : 'text-[#B0B0B0] group-focus-within:text-[#3b82f6]'}`} />
               </div>
               <input
                 type="email"
@@ -83,7 +83,7 @@ export default function Login() {
                 className={`w-full bg-[#0A0C10] text-white border rounded-xl py-3 pl-10 pr-4 focus:outline-none focus:ring-1 placeholder-[#B0B0B0]/50 transition-all duration-300
                   ${error 
                     ? 'border-red-500 focus:border-red-500 focus:ring-red-500' 
-                    : 'border-[#B0B0B0]/20 focus:border-[#CDFC31] focus:ring-[#CDFC31]'
+                    : 'border-[#B0B0B0]/20 focus:border-[#3b82f6] focus:ring-[#3b82f6]'
                   }`}
               />
             </div>
@@ -93,7 +93,7 @@ export default function Login() {
             <label className="text-sm font-medium text-[#FFFFFF] ml-1">Password</label>
             <div className="relative group">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <Lock className={`h-5 w-5 transition-colors ${error ? 'text-red-500' : 'text-[#B0B0B0] group-focus-within:text-[#CDFC31]'}`} />
+                <Lock className={`h-5 w-5 transition-colors ${error ? 'text-red-500' : 'text-[#B0B0B0] group-focus-within:text-[#3b82f6]'}`} />
               </div>
               <input
                 type={showPassword ? "text" : "password"}
@@ -105,7 +105,7 @@ export default function Login() {
                 className={`w-full bg-[#0A0C10] text-white border rounded-xl py-3 pl-10 pr-12 focus:outline-none focus:ring-1 placeholder-[#B0B0B0]/50 transition-all duration-300
                   ${error 
                     ? 'border-red-500 focus:border-red-500 focus:ring-red-500' 
-                    : 'border-[#B0B0B0]/20 focus:border-[#CDFC31] focus:ring-[#CDFC31]'
+                    : 'border-[#B0B0B0]/20 focus:border-[#3b82f6] focus:ring-[#3b82f6]'
                   }`}
               />
               <button
@@ -121,7 +121,7 @@ export default function Login() {
           <button
             type="submit"
             disabled={loading}
-            className={`w-full bg-[#CDFC31] text-[#0A0C10] font-bold py-3.5 rounded-xl hover:bg-[#bce62b] transform hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(205,252,49,0.2)]
+            className={`w-full bg-[#3b82f6] text-[#0A0C10] font-bold py-3.5 rounded-xl hover:bg-[#2563eb] transform hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(59,130,246,0.2)]
               ${loading ? 'opacity-70 cursor-not-allowed' : ''}`}
           >
             {loading ? 'Verifying...' : 'Login to Dashboard'}
@@ -132,7 +132,7 @@ export default function Login() {
         <div className="mt-8 border-t border-[#B0B0B0]/10 pt-6 text-center">
           <p className="text-[#B0B0B0] text-sm">
             Not an admin?{" "}
-            <a href="/" className="text-[#CDFC31] font-medium hover:underline">
+            <a href="/" className="text-[#3b82f6] font-medium hover:underline">
               Return to Portfolio
             </a>
           </p>

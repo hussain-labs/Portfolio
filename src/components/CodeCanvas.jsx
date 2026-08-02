@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Terminal, Code, Database } from "lucide-react";
 
 const files = [
@@ -40,7 +40,7 @@ app.listen(5000, () => {
   },
   {
     name: "terminal.sh",
-    icon: <Terminal size={14} className="text-[#CDFC31]" />,
+    icon: <Terminal size={14} className="text-[#3b82f6]" />,
     code: `$ npm start portfolio
 
 > portfolio@1.0.0 start
@@ -56,6 +56,27 @@ const CodeCanvas = () => {
   const [currentFileIndex, setCurrentFileIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
+  const tabsContainerRef = useRef(null);
+
+  useEffect(() => {
+    if (tabsContainerRef.current) {
+      const activeTab = tabsContainerRef.current.children[currentFileIndex];
+      const container = tabsContainerRef.current;
+      if (activeTab && container) {
+        const tabOffsetLeft = activeTab.offsetLeft;
+        const tabWidth = activeTab.offsetWidth;
+        const containerWidth = container.offsetWidth;
+        
+        // Calculate the scroll position to center the tab
+        const scrollPosition = tabOffsetLeft - (containerWidth / 2) + (tabWidth / 2);
+        
+        container.scrollTo({
+          left: scrollPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+  }, [currentFileIndex]);
 
   useEffect(() => {
     const currentCode = files[currentFileIndex].code;
@@ -125,22 +146,22 @@ const CodeCanvas = () => {
   };
 
   return (
-    <div className="w-full max-w-[600px] rounded-xl overflow-hidden bg-[#0A0C10] border border-[#CDFC31]/20 shadow-[0_20px_50px_rgba(0,0,0,0.5),_0_0_30px_rgba(205,252,49,0.05)] font-mono text-sm leading-relaxed transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5),_0_0_50px_rgba(205,252,49,0.15)]">
+    <div className="w-full max-w-[600px] rounded-xl overflow-hidden bg-[#0A0C10] border border-[#3b82f6]/20 shadow-[0_20px_50px_rgba(0,0,0,0.5),_0_0_30px_rgba(59,130,246,0.05)] font-mono text-sm leading-relaxed transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5),_0_0_50px_rgba(59,130,246,0.15)]">
       {/* Mac Header */}
-      <div className="bg-[#16181C] px-4 h-12 flex items-center border-b border-white/5 relative">
-        <div className="flex gap-2 z-20">
+      <div className="bg-[#16181C] pl-4 pr-0 sm:px-4 h-12 flex items-end border-b border-white/5 relative w-full overflow-hidden">
+        {/* Window Controls */}
+        <div className="flex gap-2 h-full items-center shrink-0 mr-4 sm:mr-6">
           <div className="w-3 h-3 rounded-full bg-[#FF5F56] shadow-[inset_0_0_4px_rgba(0,0,0,0.5)]"></div>
           <div className="w-3 h-3 rounded-full bg-[#FFBD2E] shadow-[inset_0_0_4px_rgba(0,0,0,0.5)]"></div>
           <div className="w-3 h-3 rounded-full bg-[#27C93F] shadow-[inset_0_0_4px_rgba(0,0,0,0.5)]"></div>
         </div>
         
         {/* File Tabs */}
-        <div className="absolute inset-0 flex justify-center items-end px-16 sm:px-20 overflow-hidden">
-          <div className="flex gap-1 h-full pt-3">
+        <div ref={tabsContainerRef} className="flex gap-1 h-full pt-3 overflow-x-auto scroll-smooth flex-1 w-full [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
             {files.map((file, idx) => (
               <div 
                 key={file.name} 
-                className={"flex items-center gap-1.5 px-3 sm:px-4 py-1.5 rounded-t-lg border border-b-0 transition-all duration-300 " + (idx === currentFileIndex ? "bg-[#0A0C10] border-[#CDFC31]/20 text-[#CDFC31]" : "bg-[#1A1D24] border-transparent text-[#606060]")}
+                className={"flex items-center gap-1.5 px-2 sm:px-4 py-1 sm:py-1.5 rounded-t-lg border border-b-0 transition-all duration-300 whitespace-nowrap " + (idx === currentFileIndex ? "bg-[#0A0C10] border-[#3b82f6]/20 text-[#3b82f6]" : "bg-[#1A1D24] border-transparent text-[#606060]")}
               >
                 {file.icon}
                 <span className="text-[10px] sm:text-xs font-medium tracking-wide">{file.name}</span>
@@ -148,10 +169,9 @@ const CodeCanvas = () => {
             ))}
           </div>
         </div>
-      </div>
 
       {/* Code Editor Body */}
-      <div className="p-4 sm:p-6 h-[320px] sm:h-[380px] overflow-hidden relative">
+      <div className="p-3 sm:p-6 h-[320px] sm:h-[380px] overflow-hidden relative">
         {/* Line Numbers */}
         <div className="absolute top-0 left-0 w-8 sm:w-12 h-full bg-[#16181C]/30 border-r border-white/5 flex flex-col items-center py-4 sm:py-6 text-[#404040] text-xs select-none">
           {Array.from({ length: 15 }).map((_, i) => (
@@ -160,9 +180,9 @@ const CodeCanvas = () => {
         </div>
         
         {/* Typing Area */}
-        <div className="pl-8 sm:pl-12 text-[#A0A0A0] whitespace-pre-wrap font-mono text-xs sm:text-sm">
+        <div className="pl-6 sm:pl-12 text-[#A0A0A0] whitespace-pre-wrap font-mono text-[10px] sm:text-sm">
           <span dangerouslySetInnerHTML={getHighlightedText()} />
-          <span className="animate-pulse inline-block w-[8px] h-[16px] bg-[#CDFC31] ml-[2px] align-middle shadow-[0_0_8px_rgba(205,252,49,0.8)]"></span>
+          <span className="animate-pulse inline-block w-[8px] h-[16px] bg-[#3b82f6] ml-[2px] align-middle shadow-[0_0_8px_rgba(59,130,246,0.8)]"></span>
         </div>
       </div>
     </div>

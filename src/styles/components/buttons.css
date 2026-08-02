@@ -6,7 +6,7 @@
 }
 
 .button-gradient-animated:hover {
-    background: #bce62b;
+    background: #2563eb;
     /* Slightly darker/different shade for hover */
     box-shadow: 0 0 15px rgba(205, 252, 49, 0.4);
 }

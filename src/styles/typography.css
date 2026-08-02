@@ -1,6 +1,6 @@
 /* For the text color animation */
 .text-gradient-animated {
-    background: linear-gradient(90deg, #CDFC31, #FFFFFF, #CDFC31);
+    background: linear-gradient(90deg, #3b82f6, #FFFFFF, #3b82f6);
     background-size: 200% 200%;
     -webkit-background-clip: text;
     background-clip: text;
@@ -9,7 +9,7 @@
 }
 
 .text-gradient-animated-hero {
-    background: linear-gradient(90deg, #CDFC31, #FFFFFF, #CDFC31);
+    background: linear-gradient(90deg, #3b82f6, #FFFFFF, #3b82f6);
     background-size: 200% 200%;
     -webkit-background-clip: text;
     background-clip: text;

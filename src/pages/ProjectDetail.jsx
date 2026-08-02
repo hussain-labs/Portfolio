@@ -67,7 +67,7 @@ const ProjectDetail = () => {
       <div style={styles.notFound}>
         <Navbar />
         <div style={{ marginTop: "120px", textAlign: "center" }}>
-          <h2 style={{ color: "#CDFC31", fontSize: "2rem", marginBottom: "1rem" }}>Project not found</h2>
+          <h2 style={{ color: "#3b82f6", fontSize: "2rem", marginBottom: "1rem" }}>Project not found</h2>
           <Link to="/" style={styles.backLink}>← Back to Portfolio</Link>
         </div>
       </div>
@@ -88,7 +88,7 @@ const ProjectDetail = () => {
         {/* Sleek Back Button */}
         <button 
           onClick={() => navigate(-1)} 
-          className="group inline-flex items-center gap-2 text-[#B0B0B0] text-sm md:text-base font-medium transition-colors hover:text-[#CDFC31] mb-6 md:mb-8"
+          className="group inline-flex items-center gap-2 text-[#B0B0B0] text-sm md:text-base font-medium transition-colors hover:text-[#3b82f6] mb-6 md:mb-8"
         >
           <span className="transition-transform group-hover:-translate-x-1"><ArrowLeft className="w-5 h-5" /></span>
           <span>Back to Projects</span>
@@ -96,7 +96,7 @@ const ProjectDetail = () => {
 
         {/* Badges */}
         <div className="flex flex-wrap gap-2 md:gap-3 justify-start mb-5 md:mb-6 mt-1 md:mt-2">
-          <span className="inline-flex items-center gap-1.5 md:gap-2 bg-transparent text-[#CDFC31] border border-[#CDFC31] md:border-2 px-2.5 py-1 md:px-5 md:py-1.5 rounded-[12px] md:rounded-[15px] text-[10px] md:text-[0.85rem] font-medium md:font-semibold font-['Poppins',sans-serif]">
+          <span className="inline-flex items-center gap-1.5 md:gap-2 bg-transparent text-[#3b82f6] border border-[#3b82f6] md:border-2 px-2.5 py-1 md:px-5 md:py-1.5 rounded-[12px] md:rounded-[15px] text-[10px] md:text-[0.85rem] font-medium md:font-semibold font-['Poppins',sans-serif]">
             <UserIcon className="w-3 h-3 md:w-4 md:h-4" /> 
             <span><span className="hidden sm:inline">Role: </span>{project.role}</span>
           </span>
@@ -143,12 +143,12 @@ const ProjectDetail = () => {
           {/* Key Features */}
           <section className="mt-6 md:mt-8">
             <h2 className="text-xl md:text-[1.3rem] font-bold text-white mb-5 md:mb-6 flex items-center gap-2">
-              <span className="text-[#CDFC31] text-[1.1em] leading-none">✦</span> Key Features
+              <span className="text-[#3b82f6] text-[1.1em] leading-none">✦</span> Key Features
             </h2>
             <ul className="flex flex-col gap-3 md:gap-4 pl-0 m-0 list-none">
               {(project.features || []).map((f) => (
                 <li key={f} className="flex items-start gap-2.5 md:gap-3 text-[14px] md:text-[0.93rem] leading-[1.6] text-[#B0B0B0]">
-                  <span className="text-[#CDFC31] mt-1 shrink-0"><CheckIcon className="w-4 h-4 md:w-5 md:h-5" /></span>
+                  <span className="text-[#3b82f6] mt-1 shrink-0"><CheckIcon className="w-4 h-4 md:w-5 md:h-5" /></span>
                   <span>{f}</span>
                 </li>
               ))}
@@ -192,7 +192,7 @@ const ProjectDetail = () => {
           <Link 
             to={`/project/${prevProject.id}`} 
             title={prevProject.name}
-            className="flex items-center justify-center w-12 h-12 bg-[#16181C] border border-[#CDFC31]/20 rounded-full text-[#CDFC31] transition-all duration-300 hover:bg-[#CDFC31] hover:text-[#0A0C10] hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(205,252,49,0.2)]"
+            className="flex items-center justify-center w-12 h-12 bg-[#16181C] border border-[#3b82f6]/20 rounded-full text-[#3b82f6] transition-all duration-300 hover:bg-[#3b82f6] hover:text-[#0A0C10] hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(59,130,246,0.2)]"
           >
             <ArrowLeft />
           </Link>
@@ -202,7 +202,7 @@ const ProjectDetail = () => {
           <Link 
             to={`/project/${nextProject.id}`} 
             title={nextProject.name}
-            className="flex items-center justify-center w-12 h-12 bg-[#16181C] border border-[#CDFC31]/20 rounded-full text-[#CDFC31] transition-all duration-300 hover:bg-[#CDFC31] hover:text-[#0A0C10] hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(205,252,49,0.2)] ml-auto"
+            className="flex items-center justify-center w-12 h-12 bg-[#16181C] border border-[#3b82f6]/20 rounded-full text-[#3b82f6] transition-all duration-300 hover:bg-[#3b82f6] hover:text-[#0A0C10] hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(59,130,246,0.2)] ml-auto"
           >
             <ArrowRight />
           </Link>
@@ -234,7 +234,7 @@ const styles = {
     width: "600px",
     height: "600px",
     borderRadius: "50%",
-    background: "radial-gradient(circle, rgba(205,252,49,0.07) 0%, transparent 70%)",
+    background: "radial-gradient(circle, rgba(59,130,246,0.07) 0%, transparent 70%)",
     pointerEvents: "none",
     zIndex: 0,
   },
@@ -245,7 +245,7 @@ const styles = {
     width: "500px",
     height: "500px",
     borderRadius: "50%",
-    background: "radial-gradient(circle, rgba(205,252,49,0.05) 0%, transparent 70%)",
+    background: "radial-gradient(circle, rgba(59,130,246,0.05) 0%, transparent 70%)",
     pointerEvents: "none",
     zIndex: 0,
   },
@@ -260,7 +260,7 @@ const styles = {
   heroTitle: {
     fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
     fontWeight: 800,
-    background: "linear-gradient(90deg, #CDFC31, #FFFFFF, #CDFC31)",
+    background: "linear-gradient(90deg, #3b82f6, #FFFFFF, #3b82f6)",
     backgroundSize: "200% 200%",
     WebkitBackgroundClip: "text",
     backgroundClip: "text",
@@ -288,8 +288,8 @@ const styles = {
     height: "auto", // Allow height to be dictated by the image aspect ratio
     borderRadius: "24px",
     overflow: "hidden",
-    border: "1px solid rgba(205,252,49,0.15)",
-    boxShadow: "0 20px 50px rgba(0,0,0,0.5), 0 0 40px rgba(205,252,49,0.05)",
+    border: "1px solid rgba(59,130,246,0.15)",
+    boxShadow: "0 20px 50px rgba(0,0,0,0.5), 0 0 40px rgba(59,130,246,0.05)",
   },
   bannerImg: {
     width: "100%",
@@ -315,7 +315,7 @@ const styles = {
   placeholderLetter: {
     fontSize: "12rem",
     fontWeight: 800,
-    color: "rgba(205,252,49,0.08)",
+    color: "rgba(59,130,246,0.08)",
     userSelect: "none",
     position: "relative",
     zIndex: 1,
@@ -325,7 +325,7 @@ const styles = {
     width: "300px",
     height: "300px",
     borderRadius: "50%",
-    background: "radial-gradient(circle, rgba(205,252,49,0.08) 0%, transparent 70%)",
+    background: "radial-gradient(circle, rgba(59,130,246,0.08) 0%, transparent 70%)",
   },
 
   /* post banner content (desc) */
@@ -340,7 +340,7 @@ const styles = {
     display: "inline-flex",
     alignItems: "center",
     gap: "0.6rem",
-    background: "#CDFC31",
+    background: "#3b82f6",
     color: "#0A0C10",
     padding: "0.9rem 2.5rem",
     borderRadius: "999px",
@@ -348,13 +348,13 @@ const styles = {
     fontSize: "1rem",
     textDecoration: "none",
     transition: "all 0.3s ease",
-    boxShadow: "0 0 30px rgba(205,252,49,0.3)",
+    boxShadow: "0 0 30px rgba(59,130,246,0.3)",
   },
 
   /* card */
   card: {
     background: "#16181C",
-    border: "1px solid rgba(205,252,49,0.1)",
+    border: "1px solid rgba(59,130,246,0.1)",
     borderRadius: "16px",
     padding: "2rem",
     backdropFilter: "blur(10px)",
@@ -370,7 +370,7 @@ const styles = {
     gap: "0.5rem",
   },
   cardTitleAccent: {
-    color: "#CDFC31",
+    color: "#3b82f6",
     fontSize: "1rem",
   },
 
@@ -381,9 +381,9 @@ const styles = {
     gap: "0.6rem",
   },
   techPill: {
-    background: "rgba(205,252,49,0.08)",
-    color: "#CDFC31",
-    border: "1px solid rgba(205,252,49,0.2)",
+    background: "rgba(59,130,246,0.08)",
+    color: "#3b82f6",
+    border: "1px solid rgba(59,130,246,0.2)",
     padding: "0.35rem 0.9rem",
     borderRadius: "8px",
     fontSize: "0.82rem",
@@ -409,7 +409,7 @@ const styles = {
     lineHeight: 1.6,
   },
   checkIcon: {
-    color: "#CDFC31",
+    color: "#3b82f6",
     marginTop: "2px",
     flexShrink: 0,
   },
@@ -425,7 +425,7 @@ const styles = {
     color: "#fff",
   },
   backLink: {
-    color: "#CDFC31",
+    color: "#3b82f6",
     textDecoration: "none",
     fontSize: "1rem",
   },

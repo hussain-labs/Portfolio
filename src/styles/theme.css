@@ -1,13 +1,13 @@
 @theme {
-    --color-primary: #CDFC31;
+    --color-primary: #3b82f6;
     --color-background: #0A0C10;
     --color-surface: #16181C;
     --color-text-primary: #FFFFFF;
     --color-text-secondary: #B0B0B0;
 
     /* Additional extracted colors */
-    --color-primary-hover: #bce62b;
+    --color-primary-hover: #2563eb;
     --color-hero-bg: #0a0a0a;
-    --color-hero-primary: #b4f42c;
-    --color-hero-tag-bg: #3e4d15;
+    --color-hero-primary: #3b82f6;
+    --color-hero-tag-bg: #1e3a8a;
 }

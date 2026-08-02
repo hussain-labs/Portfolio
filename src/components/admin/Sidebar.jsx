@@ -35,7 +35,7 @@ export default function Sidebar({ activeTab, setActiveTab }) {
             onClick={() => setActiveTab(item.id)}
             className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200
               ${activeTab === item.id
-                ? 'bg-[var(--color-primary)] text-[var(--color-background)] font-bold shadow-[0_0_15px_rgba(205,252,49,0.3)]'
+                ? 'bg-[var(--color-primary)] text-[var(--color-background)] font-bold shadow-[0_0_15px_rgba(59,130,246,0.3)]'
                 : 'text-[var(--color-text-secondary)] hover:bg-[var(--color-background)] hover:text-white'
               }`}
           >

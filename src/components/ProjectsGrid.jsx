@@ -18,7 +18,7 @@ const ProjectsGrid = () => {
             key={i}
             direction="up"
             delay={i * 100}
-            className="flex flex-col bg-[#16181C] border border-[#CDFC31]/10 rounded-2xl shadow-lg hover:shadow-[0_0_25px_rgba(205,252,49,0.15)] hover:border-[#CDFC31]/30 overflow-hidden hover:-translate-y-2 transition-all duration-500 group/card"
+            className="flex flex-col bg-[#16181C] border border-[#3b82f6]/10 rounded-2xl shadow-lg hover:shadow-[0_0_25px_rgba(59,130,246,0.15)] hover:border-[#3b82f6]/30 overflow-hidden hover:-translate-y-2 transition-all duration-500 group/card"
           >
             {/* Project Image */}
             <div className="relative h-56 overflow-hidden">
@@ -31,9 +31,9 @@ const ProjectsGrid = () => {
               ) : (
                 <div className="w-full h-full bg-gradient-to-br from-[#0F1115] to-[#16181C] flex items-center justify-center relative overflow-hidden">
                   {/* Subtle decorative shapes for placeholder */}
-                  <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#CDFC31]/5 rounded-full blur-2xl"></div>
-                  <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-[#CDFC31]/5 rounded-full blur-2xl"></div>
-                  <span className="text-[#CDFC31]/20 text-6xl font-black tracking-tighter">{project.name.substring(0, 2).toUpperCase()}</span>
+                  <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#3b82f6]/5 rounded-full blur-2xl"></div>
+                  <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-[#3b82f6]/5 rounded-full blur-2xl"></div>
+                  <span className="text-[#3b82f6]/20 text-6xl font-black tracking-tighter">{project.name.substring(0, 2).toUpperCase()}</span>
                 </div>
               )}
 
@@ -45,7 +45,7 @@ const ProjectsGrid = () => {
                 to={`/project/${project.id}`} 
                 className="absolute inset-0 bg-[#0A0C10]/60 opacity-0 group-hover/card:opacity-100 transition-all duration-300 flex items-center justify-center backdrop-blur-[2px]"
               >
-                <span className="text-white font-medium tracking-wide border border-[#CDFC31]/50 px-6 py-2.5 rounded-full bg-[#0A0C10]/60 transform translate-y-4 group-hover/card:translate-y-0 transition-all duration-300 shadow-[0_0_15px_rgba(205,252,49,0.2)]">
+                <span className="text-white font-medium tracking-wide border border-[#3b82f6]/50 px-6 py-2.5 rounded-full bg-[#0A0C10]/60 transform translate-y-4 group-hover/card:translate-y-0 transition-all duration-300 shadow-[0_0_15px_rgba(59,130,246,0.2)]">
                   View Case Study
                 </span>
               </Link>
@@ -59,7 +59,7 @@ const ProjectsGrid = () => {
                   {project.tech.slice(0, 3).map((t, index) => (
                     <span 
                       key={index} 
-                      className="text-[11px] font-semibold tracking-wider text-[#CDFC31] bg-[#CDFC31]/10 px-2.5 py-1.5 rounded-md"
+                      className="text-[11px] font-semibold tracking-wider text-[#3b82f6] bg-[#3b82f6]/10 px-2.5 py-1.5 rounded-md"
                     >
                       {t}
                     </span>
@@ -72,7 +72,7 @@ const ProjectsGrid = () => {
                 </div>
               )}
 
-              <h3 className="text-2xl font-bold text-white mb-2 group-hover/card:text-[#CDFC31] transition-colors duration-300">
+              <h3 className="text-2xl font-bold text-white mb-2 group-hover/card:text-[#3b82f6] transition-colors duration-300">
                 {project.name}
               </h3>
               
@@ -93,7 +93,7 @@ const ProjectsGrid = () => {
                 {/* View Project Button */}
                 <Link
                   to={`/project/${project.id}`}
-                  className="w-11 h-11 rounded-full bg-[#CDFC31]/10 flex items-center justify-center text-[#CDFC31] group-hover/card:bg-[#CDFC31] group-hover/card:text-[#0A0C10] group-hover/card:shadow-[0_0_15px_rgba(205,252,49,0.4)] transition-all duration-300"
+                  className="w-11 h-11 rounded-full bg-[#3b82f6]/10 flex items-center justify-center text-[#3b82f6] group-hover/card:bg-[#3b82f6] group-hover/card:text-[#0A0C10] group-hover/card:shadow-[0_0_15px_rgba(59,130,246,0.4)] transition-all duration-300"
                   aria-label="View Project"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="transform -rotate-45 group-hover/card:rotate-0 transition-transform duration-300">

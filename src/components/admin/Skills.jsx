@@ -131,7 +131,7 @@ export default function Skills() {
           <h2 className="text-3xl font-bold text-white">Skills Manager</h2>
           <p className="text-[#B0B0B0] mt-1">Manage Main Skills (with levels) and Other Skills.</p>
         </div>
-        <button onClick={openAddModal} className="bg-[#CDFC31] text-[#0A0C10] px-6 py-3 rounded-xl font-bold flex items-center gap-2 hover:bg-[#bce62b] transition-colors shadow-[0_0_15px_rgba(205,252,49,0.2)]">
+        <button onClick={openAddModal} className="bg-[#3b82f6] text-[#0A0C10] px-6 py-3 rounded-xl font-bold flex items-center gap-2 hover:bg-[#2563eb] transition-colors shadow-[0_0_15px_rgba(59,130,246,0.2)]">
           <Plus className="w-5 h-5" />
           Add New Skill
         </button>
@@ -141,7 +141,7 @@ export default function Skills() {
       <div className="bg-[#16181C] rounded-2xl border border-[#B0B0B0]/10 overflow-hidden min-h-[400px] p-6">
         
         {/* Search */}
-        <div className="mb-8 flex items-center bg-[#0A0C10] px-4 py-3 rounded-xl border border-[#B0B0B0]/10 focus-within:border-[#CDFC31] max-w-md">
+        <div className="mb-8 flex items-center bg-[#0A0C10] px-4 py-3 rounded-xl border border-[#B0B0B0]/10 focus-within:border-[#3b82f6] max-w-md">
             <Search className="w-5 h-5 text-[#B0B0B0]" />
             <input 
               type="text" 
@@ -153,7 +153,7 @@ export default function Skills() {
         </div>
 
         {isLoading && (
-          <div className="flex items-center justify-center py-12 text-[#CDFC31]">
+          <div className="flex items-center justify-center py-12 text-[#3b82f6]">
              <Loader2 className="w-8 h-8 animate-spin mr-2" /> Loading Skills...
           </div>
         )}
@@ -164,11 +164,11 @@ export default function Skills() {
             {/* SECTION 1: MAIN SKILLS */}
             <div>
                <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                  <Code2 className="text-[#CDFC31]" /> Main Skills
+                  <Code2 className="text-[#3b82f6]" /> Main Skills
                </h3>
                <div className="space-y-3">
                   {mainSkills.map((skill) => (
-                    <div key={skill.id} className="bg-[#0A0C10] p-4 rounded-xl border border-[#B0B0B0]/10 hover:border-[#CDFC31]/50 transition-colors group">
+                    <div key={skill.id} className="bg-[#0A0C10] p-4 rounded-xl border border-[#B0B0B0]/10 hover:border-[#3b82f6]/50 transition-colors group">
                        <div className="flex justify-between items-center mb-2">
                           <span className="text-white font-medium">{skill.name}</span>
                           <div className="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -177,7 +177,7 @@ export default function Skills() {
                           </div>
                        </div>
                        <div className="w-full h-2 bg-[#16181C] rounded-full overflow-hidden">
-                          <div className="h-full bg-[#CDFC31]" style={{ width: `${skill.level}%` }}></div>
+                          <div className="h-full bg-[#3b82f6]" style={{ width: `${skill.level}%` }}></div>
                        </div>
                        <p className="text-right text-[#B0B0B0] text-xs mt-1">{skill.level}%</p>
                     </div>
@@ -189,11 +189,11 @@ export default function Skills() {
             {/* SECTION 2: OTHER SKILLS */}
             <div>
                <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                  <Layers className="text-[#CDFC31]" /> Other Skills
+                  <Layers className="text-[#3b82f6]" /> Other Skills
                </h3>
                <div className="flex flex-wrap gap-3">
                   {otherSkills.map((skill) => (
-                    <div key={skill.id} className="bg-[#0A0C10] px-4 py-2 rounded-full border border-[#B0B0B0]/10 hover:border-[#CDFC31] transition-colors flex items-center gap-3 group">
+                    <div key={skill.id} className="bg-[#0A0C10] px-4 py-2 rounded-full border border-[#B0B0B0]/10 hover:border-[#3b82f6] transition-colors flex items-center gap-3 group">
                        <span className="text-[#B0B0B0] group-hover:text-white">{skill.name}</span>
                        <div className="flex gap-1 border-l border-[#B0B0B0]/20 pl-2">
                           <button onClick={() => openEditModal(skill)} className="text-[#B0B0B0] hover:text-white"><Pencil className="w-3 h-3"/></button>
@@ -225,14 +225,14 @@ export default function Skills() {
                      <button
                         type="button"
                         onClick={() => setFormData({...formData, type: 'main'})}
-                        className={`py-2 rounded-lg border text-sm font-bold transition-all ${formData.type === 'main' ? 'bg-[#CDFC31] text-black border-[#CDFC31]' : 'bg-[#0A0C10] text-[#B0B0B0] border-[#B0B0B0]/20'}`}
+                        className={`py-2 rounded-lg border text-sm font-bold transition-all ${formData.type === 'main' ? 'bg-[#3b82f6] text-black border-[#3b82f6]' : 'bg-[#0A0C10] text-[#B0B0B0] border-[#B0B0B0]/20'}`}
                      >
                         Main Skill
                      </button>
                      <button
                         type="button"
                         onClick={() => setFormData({...formData, type: 'other'})}
-                        className={`py-2 rounded-lg border text-sm font-bold transition-all ${formData.type === 'other' ? 'bg-[#CDFC31] text-black border-[#CDFC31]' : 'bg-[#0A0C10] text-[#B0B0B0] border-[#B0B0B0]/20'}`}
+                        className={`py-2 rounded-lg border text-sm font-bold transition-all ${formData.type === 'other' ? 'bg-[#3b82f6] text-black border-[#3b82f6]' : 'bg-[#0A0C10] text-[#B0B0B0] border-[#B0B0B0]/20'}`}
                      >
                         Other Skill
                      </button>
@@ -246,7 +246,7 @@ export default function Skills() {
                      required
                      value={formData.name}
                      onChange={(e) => setFormData({...formData, name: e.target.value})}
-                     className="w-full bg-[#0A0C10] border border-[#B0B0B0]/20 rounded-lg p-3 text-white focus:border-[#CDFC31] focus:outline-none"
+                     className="w-full bg-[#0A0C10] border border-[#B0B0B0]/20 rounded-lg p-3 text-white focus:border-[#3b82f6] focus:outline-none"
                      placeholder={formData.type === 'main' ? "e.g. React.js" : "e.g. AWS EC2"}
                   />
                </div>
@@ -264,12 +264,12 @@ export default function Skills() {
                         max="100" 
                         value={formData.level}
                         onChange={(e) => setFormData({...formData, level: e.target.value})}
-                        className="w-full h-2 bg-[#0A0C10] rounded-lg appearance-none cursor-pointer accent-[#CDFC31]"
+                        className="w-full h-2 bg-[#0A0C10] rounded-lg appearance-none cursor-pointer accent-[#3b82f6]"
                      />
                   </div>
                )}
 
-               <button type="submit" className="w-full bg-[#CDFC31] text-[#0A0C10] py-3 rounded-xl font-bold hover:bg-[#bce62b] mt-4">
+               <button type="submit" className="w-full bg-[#3b82f6] text-[#0A0C10] py-3 rounded-xl font-bold hover:bg-[#2563eb] mt-4">
                   {isEditing ? 'Save Changes' : 'Add Skill'}
                </button>
             </form>

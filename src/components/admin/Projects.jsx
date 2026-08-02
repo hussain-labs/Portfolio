@@ -117,7 +117,7 @@ export default function Projects() {
         </div>
         <button 
           onClick={openAddModal}
-          className="bg-[#CDFC31] text-[#0A0C10] px-6 py-3 rounded-xl font-bold flex items-center gap-2 hover:bg-[#bce62b] transition-colors shadow-[0_0_15px_rgba(205,252,49,0.2)]"
+          className="bg-[#3b82f6] text-[#0A0C10] px-6 py-3 rounded-xl font-bold flex items-center gap-2 hover:bg-[#2563eb] transition-colors shadow-[0_0_15px_rgba(59,130,246,0.2)]"
         >
           <Plus className="w-5 h-5" />
           Add New Project
@@ -127,7 +127,7 @@ export default function Projects() {
       <div className="bg-[#16181C] rounded-2xl border border-[#B0B0B0]/10 overflow-hidden min-h-[400px]">
         
         <div className="p-4 border-b border-[#B0B0B0]/10 flex gap-4">
-          <div className="flex items-center bg-[#0A0C10] px-4 py-2 rounded-lg border border-[#B0B0B0]/10 focus-within:border-[#CDFC31] flex-1">
+          <div className="flex items-center bg-[#0A0C10] px-4 py-2 rounded-lg border border-[#B0B0B0]/10 focus-within:border-[#3b82f6] flex-1">
             <Search className="w-4 h-4 text-[#B0B0B0]" />
             <input 
               type="text" 
@@ -140,7 +140,7 @@ export default function Projects() {
         </div>
 
         {isLoading && (
-          <div className="flex items-center justify-center py-12 text-[#CDFC31]">
+          <div className="flex items-center justify-center py-12 text-[#3b82f6]">
                        <Loader2 className="w-8 h-8 animate-spin mr-2" /> Loading Projects...
                     </div>
         )}
@@ -160,14 +160,14 @@ export default function Projects() {
                         {project.image ? (
                             <img src={project.image} alt={project.name} className="w-full h-full object-cover" onError={(e) => e.target.src=''} />
                         ) : (
-                            <span className="text-[#CDFC31] font-bold text-xl">{project.name?.charAt(0)}</span>
+                            <span className="text-[#3b82f6] font-bold text-xl">{project.name?.charAt(0)}</span>
                         )}
                     </div>
 
                     <div>
                       <div className="flex flex-wrap items-center gap-2 mb-1">
-                        <h3 className="text-white text-lg font-bold group-hover:text-[#CDFC31] transition-colors">{project.name}</h3>
-                        <span className="text-xs bg-[#CDFC31]/10 text-[#CDFC31] px-2 py-0.5 rounded border border-[#CDFC31]/20">
+                        <h3 className="text-white text-lg font-bold group-hover:text-[#3b82f6] transition-colors">{project.name}</h3>
+                        <span className="text-xs bg-[#3b82f6]/10 text-[#3b82f6] px-2 py-0.5 rounded border border-[#3b82f6]/20">
                            {project.role}
                         </span>
                       </div>
@@ -179,7 +179,7 @@ export default function Projects() {
                   {/* Links & Actions */}
                   <div className="flex items-center gap-3 md:border-l md:border-[#B0B0B0]/10 md:pl-6">
                      {project.live && (
-                        <a href={project.live} target="_blank" rel="noreferrer" className="p-2 text-[#B0B0B0] hover:text-[#CDFC31] transition-colors" title="Live Site">
+                        <a href={project.live} target="_blank" rel="noreferrer" className="p-2 text-[#B0B0B0] hover:text-[#3b82f6] transition-colors" title="Live Site">
                            <Globe className="w-4 h-4" />
                         </a>
                      )}
@@ -229,7 +229,7 @@ export default function Projects() {
                             required
                             value={formData.name}
                             onChange={(e) => setFormData({...formData, name: e.target.value})}
-                            className="w-full bg-[#0A0C10] border border-[#B0B0B0]/20 rounded-lg p-3 text-white focus:border-[#CDFC31] focus:outline-none"
+                            className="w-full bg-[#0A0C10] border border-[#B0B0B0]/20 rounded-lg p-3 text-white focus:border-[#3b82f6] focus:outline-none"
                             placeholder="e.g. Coral Plus"
                         />
                     </div>
@@ -238,7 +238,7 @@ export default function Projects() {
                         <input 
                             value={formData.role}
                             onChange={(e) => setFormData({...formData, role: e.target.value})}
-                            className="w-full bg-[#0A0C10] border border-[#B0B0B0]/20 rounded-lg p-3 text-white focus:border-[#CDFC31] focus:outline-none"
+                            className="w-full bg-[#0A0C10] border border-[#B0B0B0]/20 rounded-lg p-3 text-white focus:border-[#3b82f6] focus:outline-none"
                             placeholder="e.g. Full Stack Dev"
                         />
                     </div>
@@ -249,7 +249,7 @@ export default function Projects() {
                     <textarea 
                         value={formData.desc}
                         onChange={(e) => setFormData({...formData, desc: e.target.value})}
-                        className="w-full bg-[#0A0C10] border border-[#B0B0B0]/20 rounded-lg p-3 text-white focus:border-[#CDFC31] focus:outline-none h-24 resize-none"
+                        className="w-full bg-[#0A0C10] border border-[#B0B0B0]/20 rounded-lg p-3 text-white focus:border-[#3b82f6] focus:outline-none h-24 resize-none"
                         placeholder="Brief description of the project..."
                     />
                 </div>
@@ -260,7 +260,7 @@ export default function Projects() {
                         <input 
                             value={formData.date}
                             onChange={(e) => setFormData({...formData, date: e.target.value})}
-                            className="w-full bg-[#0A0C10] border border-[#B0B0B0]/20 rounded-lg p-3 text-white focus:border-[#CDFC31] focus:outline-none"
+                            className="w-full bg-[#0A0C10] border border-[#B0B0B0]/20 rounded-lg p-3 text-white focus:border-[#3b82f6] focus:outline-none"
                             placeholder="April/2025...June/2025"
                         />
                     </div>
@@ -269,7 +269,7 @@ export default function Projects() {
                         <input 
                             value={formData.live}
                             onChange={(e) => setFormData({...formData, live: e.target.value})}
-                            className="w-full bg-[#0A0C10] border border-[#B0B0B0]/20 rounded-lg p-3 text-white focus:border-[#CDFC31] focus:outline-none"
+                            className="w-full bg-[#0A0C10] border border-[#B0B0B0]/20 rounded-lg p-3 text-white focus:border-[#3b82f6] focus:outline-none"
                             placeholder="https://..."
                         />
                     </div>
@@ -281,7 +281,7 @@ export default function Projects() {
                         <input 
                             value={formData.image}
                             onChange={(e) => setFormData({...formData, image: e.target.value})}
-                            className="w-full bg-[#0A0C10] border border-[#B0B0B0]/20 rounded-lg p-3 text-white focus:border-[#CDFC31] focus:outline-none"
+                            className="w-full bg-[#0A0C10] border border-[#B0B0B0]/20 rounded-lg p-3 text-white focus:border-[#3b82f6] focus:outline-none"
                             placeholder="https://..."
                         />
                     </div>
@@ -290,7 +290,7 @@ export default function Projects() {
                         <input 
                             value={formData.link}
                             onChange={(e) => setFormData({...formData, link: e.target.value})}
-                            className="w-full bg-[#0A0C10] border border-[#B0B0B0]/20 rounded-lg p-3 text-white focus:border-[#CDFC31] focus:outline-none"
+                            className="w-full bg-[#0A0C10] border border-[#B0B0B0]/20 rounded-lg p-3 text-white focus:border-[#3b82f6] focus:outline-none"
                             placeholder="#"
                         />
                     </div>
@@ -307,7 +307,7 @@ export default function Projects() {
                     </button>
                     <button 
                         type="submit"
-                        className="flex-1 bg-[#CDFC31] text-[#0A0C10] py-3 rounded-xl font-bold hover:bg-[#bce62b] transition-colors"
+                        className="flex-1 bg-[#3b82f6] text-[#0A0C10] py-3 rounded-xl font-bold hover:bg-[#2563eb] transition-colors"
                     >
                         {isEditing ? 'Save Changes' : 'Create Project'}
                     </button>
