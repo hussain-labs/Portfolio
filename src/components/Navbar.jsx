@@ -14,7 +14,7 @@ const Navbar = () => {
             <img src={logo} className="w-[90px] h-auto md:w-[110px] lg:w-[144px] md:h-auto logoimg_hero" alt="logo" />
             <span className="flex flex-col ml-2 md:ml-0">
               <h3 className="text-[18px] md:text-[24px] lg:text-[32px] font-[600] font-[Poppins] leading-tight logotext_hero">Muzamil Hussain</h3>
-              <p className="text-[10px] md:text-[12px] lg:text-[15px] font-[400] font-[Poppins] text-[var(--color-primary)] logosubtext_hero">MERN Stack Developer</p>
+              <p className="text-[10px] md:text-[12px] lg:text-[15px] font-[400] font-[Poppins] text-[var(--color-primary)] logosubtext_hero">AI-Driven Full-Stack Developer (MERN)</p>
             </span>
           </h1>
         </a>

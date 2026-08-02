@@ -8,5 +8,5 @@
 .button-gradient-animated:hover {
     background: #2563eb;
     /* Slightly darker/different shade for hover */
-    box-shadow: 0 0 15px rgba(205, 252, 49, 0.4);
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.6);
 }
