@@ -13,10 +13,10 @@ const ContactForm = () => {
 
     emailjs
       .sendForm(
-        "service_o9i4xss", // Your Service ID
-        "template_dy97l39", // Your Template ID
+        "service_qt25q7q", // Your Service ID
+        "template_ugqjetd", // Your Template ID
         form.current,
-        "aHu0DrOUw02xJGvrt" // Your EmailJS public key
+        "EOVnL8sExFIi9D7Y9" // Your EmailJS public key
       )
       .then(
         (result) => {
@@ -38,26 +38,26 @@ const ContactForm = () => {
     <form
       ref={form}
       onSubmit={sendEmail}
-      className="space-y-5" 
+      className="space-y-5"
     >
       <input
         type="text"
         name="user_name"
         placeholder="Your Name"
-        className="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
+        className="w-full bg-[var(--color-surface)] text-white border border-[#3b82f6]/20 p-4 rounded-xl focus:ring-2 focus:ring-[#3b82f6] focus:border-transparent transition-all outline-none placeholder-gray-500 hover:border-[#3b82f6]/50 shadow-sm"
         required
       />
       <input
         type="email"
         name="user_email"
         placeholder="Your Email"
-        className="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
+        className="w-full bg-[var(--color-surface)] text-white border border-[#3b82f6]/20 p-4 rounded-xl focus:ring-2 focus:ring-[#3b82f6] focus:border-transparent transition-all outline-none placeholder-gray-500 hover:border-[#3b82f6]/50 shadow-sm"
         required
       />
       <textarea
         name="message"
         placeholder="Your Message"
-        className="w-full border border-gray-300 p-3 rounded-lg h-32 focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
+        className="w-full bg-[var(--color-surface)] text-white border border-[#3b82f6]/20 p-4 rounded-xl h-40 focus:ring-2 focus:ring-[#3b82f6] focus:border-transparent transition-all outline-none placeholder-gray-500 hover:border-[#3b82f6]/50 shadow-sm resize-none"
         required
       ></textarea>
 
@@ -99,12 +99,12 @@ const ContactForm = () => {
 
       {/* Success / Error messages */}
       {status === "success" && (
-        <p className="mt-4 text-green-600 bg-green-100 p-3 rounded-lg text-sm text-center animate-bounce">
+        <p className="mt-4 text-[#3b82f6] bg-[#3b82f6]/10 border border-[#3b82f6]/20 p-4 rounded-xl text-sm text-center font-medium animate-pulse">
           ✅ Message sent successfully! I'll be in touch soon.
         </p>
       )}
       {status === "error" && (
-        <p className="mt-4 text-red-600 bg-red-100 p-3 rounded-lg text-sm text-center">
+        <p className="mt-4 text-red-400 bg-red-400/10 border border-red-400/20 p-4 rounded-xl text-sm text-center font-medium">
           ❌ Oops! Something went wrong. Please try again or email me directly.
         </p>
       )}

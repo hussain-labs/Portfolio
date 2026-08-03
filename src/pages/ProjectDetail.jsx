@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import projects from "../data/projects.json";
 import Navbar from "../components/Navbar";
@@ -51,6 +51,7 @@ const UserIcon = ({ className }) => (
 const ProjectDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const project = projects.find((p) => p.id === id);
   const projectIndex = projects.findIndex((p) => p.id === id);
@@ -60,6 +61,7 @@ const ProjectDetail = () => {
   // scroll to top on mount
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+    setCurrentImageIndex(0);
   }, [id]);
 
   if (!project) {
@@ -119,9 +121,63 @@ const ProjectDetail = () => {
       <div className="max-w-[1638px] mx-auto px-6 md:px-16 relative" style={styles.bannerContainer}>
         <div style={styles.boxedBanner}>
 
-          {/* Banner Image */}
-          {project.image ? (
-            <img src={project.image} alt={project.name} style={styles.bannerImg} />
+          {/* Banner Image Carousel */}
+          {(project.images && project.images.length > 0) || project.image ? (
+            <div style={{ position: "relative", width: "100%", height: "100%" }}>
+              <img 
+                src={project.images && project.images.length > 0 ? project.images[currentImageIndex] : project.image} 
+                alt={project.name} 
+                style={styles.bannerImg} 
+              />
+              {project.images && project.images.length > 1 && (
+                <>
+                  <button 
+                    onClick={() => setCurrentImageIndex(prev => prev === 0 ? project.images.length - 1 : prev - 1)}
+                    style={{
+                      position: "absolute",
+                      left: "20px",
+                      top: "50%",
+                      transform: "translateY(-50%)",
+                      zIndex: 10,
+                      background: "rgba(0,0,0,0.5)",
+                      border: "none",
+                      borderRadius: "50%",
+                      width: "40px",
+                      height: "40px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      cursor: "pointer",
+                      color: "white"
+                    }}
+                  >
+                    <ArrowLeft className="w-5 h-5" />
+                  </button>
+                  <button 
+                    onClick={() => setCurrentImageIndex(prev => prev === project.images.length - 1 ? 0 : prev + 1)}
+                    style={{
+                      position: "absolute",
+                      right: "20px",
+                      top: "50%",
+                      transform: "translateY(-50%)",
+                      zIndex: 10,
+                      background: "rgba(0,0,0,0.5)",
+                      border: "none",
+                      borderRadius: "50%",
+                      width: "40px",
+                      height: "40px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      cursor: "pointer",
+                      color: "white"
+                    }}
+                  >
+                    <ArrowRight className="w-5 h-5" />
+                  </button>
+                </>
+              )}
+            </div>
           ) : (
             <div style={styles.bannerPlaceholder}>
               <span style={styles.placeholderLetter}>{project.name[0]}</span>
@@ -156,6 +212,47 @@ const ProjectDetail = () => {
               ))}
             </ul>
           </section>
+
+          {/* ── Sub-Projects Gallery (If present) ── */}
+          {project.subProjects && project.subProjects.length > 0 && (
+            <section className="mt-10 md:mt-16 w-full">
+              <h2 className="text-xl md:text-[1.5rem] font-bold text-white mb-6 md:mb-8 flex items-center gap-2">
+                <span className="text-[#3b82f6] text-[1.1em] leading-none">✦</span> Portfolio Gallery
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 w-full">
+                {project.subProjects.map((sub, i) => (
+                  <a
+                    key={i}
+                    href={sub.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block group bg-[#16181C] border border-[#2A2D35] rounded-2xl overflow-hidden hover:border-[#3b82f6]/50 transition-all duration-300 shadow-sm hover:shadow-lg hover:shadow-[#3b82f6]/10"
+                  >
+                    <div className="aspect-video bg-[#0A0C10] relative overflow-hidden flex items-center justify-center">
+                      {sub.image ? (
+                        <img 
+                          src={sub.image} 
+                          alt={sub.name} 
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                      ) : (
+                        <div className="flex items-center justify-center w-full h-full text-[#3b82f6] font-bold text-3xl">
+                          {sub.name[0]}
+                        </div>
+                      )}
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
+                    </div>
+                    <div className="p-5">
+                      <h3 className="text-white font-bold text-lg group-hover:text-[#3b82f6] transition-colors">{sub.name}</h3>
+                      <div className="mt-2 text-[#3b82f6] text-sm font-medium flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity translate-x-[-10px] group-hover:translate-x-0 duration-300">
+                        View Live <span className="text-[10px]">↗</span>
+                      </div>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </section>
+          )}
         </div>
 
         {/* ── Right Sidebar Column ── */}

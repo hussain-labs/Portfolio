@@ -19,7 +19,28 @@
             "Modern UI/UX",
             "Reusable components"
         ],
-        "link": "#"
+        "subProjects": [
+            {
+                "name": "Portfolio One",
+                "image": "",
+                "live": "#"
+            },
+            {
+                "name": "Portfolio Two",
+                "image": "",
+                "live": "#"
+            },
+            {
+                "name": "Portfolio Three",
+                "image": "",
+                "live": "#"
+            }
+        ],
+        "link": "#",
+        "images": [
+            "/images/projects/portfolios/portfolio.png",
+            "/images/projects/portfolios/portfolio.png"
+        ]
     },
     {
         "id": "keystrokes",
@@ -42,7 +63,11 @@
             "Local storage integration",
             "Responsive user interfaces"
         ],
-        "link": "#"
+        "link": "#",
+        "images": [
+            "/images/projects/keystrokes/keystrrokes.png",
+            "/images/projects/keystrokes/keystrrokes.png"
+        ]
     },
     {
         "id": "patient-management",
@@ -65,7 +90,11 @@
             "Appointment management",
             "CRUD operations & dashboards"
         ],
-        "link": "#"
+        "link": "#",
+        "images": [
+            "/images/projects/patientmanagement/patient_management_system.png",
+            "/images/projects/patientmanagement/patient_management_system.png"
+        ]
     },
     {
         "id": "recyco-track",
@@ -91,7 +120,11 @@
             "Custom MongoDB schema design",
             "Full-stack MERN implementation"
         ],
-        "link": "#"
+        "link": "#",
+        "images": [
+            "/images/projects/recycotrack/recycotrack.png",
+            "/images/projects/recycotrack/recycotrack.png"
+        ]
     },
     {
         "id": "shinvo",
@@ -113,7 +146,11 @@
             "REST API integration",
             "Optimized UI performance"
         ],
-        "link": "#"
+        "link": "#",
+        "images": [
+            "/images/projects/shinvo/shinvo.png",
+            "/images/projects/shinvo/shinvo.png"
+        ]
     },
     {
         "id": "paychain",
@@ -140,7 +177,11 @@
             "Blockchain integration",
             "Secure backend APIs"
         ],
-        "link": "#"
+        "link": "#",
+        "images": [
+            "/images/projects/paychain/paychain.png",
+            "/images/projects/paychain/paychain.png"
+        ]
     },
     {
         "id": "inzaar",
@@ -149,7 +190,7 @@
         "desc": "MERN Stack LMS with Student, Moderator, and Admin dashboards.",
         "overview": "Led the development of a MERN Stack LMS with Student, Moderator, and Admin dashboards. Implemented role-based authentication, batch management, and course management features. Coordinated the development team and contributed to both frontend and backend development.",
         "company": "CallBackCrew",
-        "live": "#",
+        "live": "https://inzaar.vercel.app/",
         "image": "/images/projects/inzaar/inzaar.png",
         "tech": [
             "React.js",
@@ -165,6 +206,10 @@
             "Course management",
             "Student, Moderator, and Admin dashboards"
         ],
-        "link": "#"
+        "link": "#",
+        "images": [
+            "/images/projects/inzaar/inzaar.png",
+            "/images/projects/inzaar/inzaar-1.png"
+        ]
     }
 ]
