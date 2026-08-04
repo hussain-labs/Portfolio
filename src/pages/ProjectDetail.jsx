@@ -96,19 +96,7 @@ const ProjectDetail = () => {
           <span>Back to Projects</span>
         </button>
 
-        {/* Badges */}
-        <div className="flex flex-wrap gap-2 md:gap-3 justify-start mb-5 md:mb-6 mt-1 md:mt-2">
-          <span className="inline-flex items-center gap-1.5 md:gap-2 bg-transparent text-[#3b82f6] border border-[#3b82f6] md:border-2 px-2.5 py-1 md:px-5 md:py-1.5 rounded-[12px] md:rounded-[15px] text-[10px] md:text-[0.85rem] font-medium md:font-semibold font-['Poppins',sans-serif]">
-            <UserIcon className="w-3 h-3 md:w-4 md:h-4" /> 
-            <span><span className="hidden sm:inline">Role: </span>{project.role}</span>
-          </span>
-          {project.company && (
-            <span className="inline-flex items-center gap-1.5 md:gap-2 bg-transparent text-[#B0B0B0] border border-[#B0B0B0] md:border-2 px-2.5 py-1 md:px-5 md:py-1.5 rounded-[12px] md:rounded-[15px] text-[10px] md:text-[0.85rem] font-medium font-['Poppins',sans-serif]">
-              <CalendarIcon className="w-3 h-3 md:w-4 md:h-4" /> 
-              <span><span className="hidden sm:inline">Organization: </span>{project.company}</span>
-            </span>
-          )}
-        </div>
+
 
         {/* Title & Short Intro */}
         <h1 style={styles.heroTitle}>{project.name}</h1>
@@ -123,12 +111,27 @@ const ProjectDetail = () => {
 
           {/* Banner Image Carousel */}
           {(project.images && project.images.length > 0) || project.image ? (
-            <div style={{ position: "relative", width: "100%", height: "100%" }}>
-              <img 
-                src={project.images && project.images.length > 0 ? project.images[currentImageIndex] : project.image} 
-                alt={project.name} 
-                style={styles.bannerImg} 
-              />
+            <div style={{ position: "relative", width: "100%", height: "100%", overflow: "hidden" }}>
+              {project.images && project.images.length > 0 ? (
+                project.images.map((imgUrl, index) => (
+                  <img
+                    key={index}
+                    src={imgUrl}
+                    alt={`${project.name} screenshot ${index + 1}`}
+                    style={{
+                      ...styles.bannerImg,
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      opacity: index === currentImageIndex ? 1 : 0,
+                      transition: "opacity 0.5s ease-in-out",
+                      zIndex: index === currentImageIndex ? 1 : 0
+                    }}
+                  />
+                ))
+              ) : (
+                <img src={project.image} alt={project.name} style={{ ...styles.bannerImg, position: "absolute", top: 0, left: 0 }} />
+              )}
               {project.images && project.images.length > 1 && (
                 <>
                   <button 
@@ -148,8 +151,11 @@ const ProjectDetail = () => {
                       alignItems: "center",
                       justifyContent: "center",
                       cursor: "pointer",
-                      color: "white"
+                      color: "white",
+                      transition: "background 0.3s ease"
                     }}
+                    onMouseOver={(e) => e.currentTarget.style.background = "rgba(59,130,246,0.8)"}
+                    onMouseOut={(e) => e.currentTarget.style.background = "rgba(0,0,0,0.5)"}
                   >
                     <ArrowLeft className="w-5 h-5" />
                   </button>
@@ -170,8 +176,11 @@ const ProjectDetail = () => {
                       alignItems: "center",
                       justifyContent: "center",
                       cursor: "pointer",
-                      color: "white"
+                      color: "white",
+                      transition: "background 0.3s ease"
                     }}
+                    onMouseOver={(e) => e.currentTarget.style.background = "rgba(59,130,246,0.8)"}
+                    onMouseOut={(e) => e.currentTarget.style.background = "rgba(0,0,0,0.5)"}
                   >
                     <ArrowRight className="w-5 h-5" />
                   </button>
@@ -256,7 +265,35 @@ const ProjectDetail = () => {
         </div>
 
         {/* ── Right Sidebar Column ── */}
-        <aside className="w-full lg:w-[320px] xl:w-[400px] shrink-0">
+        <aside className="w-full lg:w-[320px] xl:w-[400px] shrink-0 flex flex-col gap-6">
+          {/* Project Details Card */}
+          <section style={styles.card}>
+            <h2 style={styles.cardTitle}>
+              <span style={styles.cardTitleAccent}>✦</span> Project Details
+            </h2>
+            <div className="flex flex-col gap-4">
+              <div className="flex items-center gap-3">
+                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#3b82f6]/10 text-[#3b82f6]">
+                  <UserIcon className="w-4 h-4" />
+                </div>
+                <div>
+                  <div className="text-[11px] uppercase tracking-wider text-gray-500 font-bold mb-0.5">Role</div>
+                  <div className="text-[0.95rem] font-semibold text-white">{project.role}</div>
+                </div>
+              </div>
+              {project.company && (
+                <div className="flex items-center gap-3">
+                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#3b82f6]/10 text-[#3b82f6]">
+                    <CalendarIcon className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <div className="text-[11px] uppercase tracking-wider text-gray-500 font-bold mb-0.5">Organization</div>
+                    <div className="text-[0.95rem] font-semibold text-white">{project.company}</div>
+                  </div>
+                </div>
+              )}
+            </div>
+          </section>
           {/* Tech Stack Card */}
           <section style={styles.card}>
             <h2 style={styles.cardTitle}>
@@ -357,7 +394,7 @@ const styles = {
     textAlign: "left",
   },
   heroTitle: {
-    fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
+    fontSize: "clamp(2rem, 5vw, 3.5rem)",
     fontWeight: 800,
     background: "linear-gradient(90deg, #3b82f6, #FFFFFF, #3b82f6)",
     backgroundSize: "200% 200%",
@@ -384,17 +421,21 @@ const styles = {
   boxedBanner: {
     position: "relative",
     width: "100%",
-    height: "auto", // Allow height to be dictated by the image aspect ratio
+    height: "75vh",
+    minHeight: "550px",
+    maxHeight: "900px",
     borderRadius: "24px",
     overflow: "hidden",
     border: "1px solid rgba(59,130,246,0.15)",
     boxShadow: "0 20px 50px rgba(0,0,0,0.5), 0 0 40px rgba(59,130,246,0.05)",
+    backgroundColor: "#0A0C10",
   },
   bannerImg: {
     width: "100%",
-    height: "auto", // Automatically scale height according to image width
-    display: "block", // Removes bottom spacing issue
-    objectFit: "contain",
+    height: "100%",
+    display: "block",
+    objectFit: "cover",
+    objectPosition: "top center",
   },
   bannerOverlay: {
     position: "absolute",
