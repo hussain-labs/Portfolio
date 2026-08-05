@@ -107,7 +107,7 @@ const ProjectDetail = () => {
 
       {/* ── boxed max-width banner ── */}
       <div className="max-w-[1638px] mx-auto px-6 md:px-16 relative" style={styles.bannerContainer}>
-        <div style={styles.boxedBanner}>
+        <div className="relative w-full rounded-2xl md:rounded-[24px] overflow-hidden border border-[#3b82f6]/20 bg-[#0A0C10] shadow-[0_20px_50px_rgba(0,0,0,0.5),0_0_40px_rgba(59,130,246,0.05)] aspect-[16/11] md:aspect-auto md:h-[75vh] md:min-h-[550px] md:max-h-[900px]">
 
           {/* Banner Image Carousel */}
           {(project.images && project.images.length > 0) || project.image ? (
@@ -418,18 +418,7 @@ const styles = {
   bannerContainer: {
     marginBottom: "3rem",
   },
-  boxedBanner: {
-    position: "relative",
-    width: "100%",
-    height: "75vh",
-    minHeight: "550px",
-    maxHeight: "900px",
-    borderRadius: "24px",
-    overflow: "hidden",
-    border: "1px solid rgba(59,130,246,0.15)",
-    boxShadow: "0 20px 50px rgba(0,0,0,0.5), 0 0 40px rgba(59,130,246,0.05)",
-    backgroundColor: "#0A0C10",
-  },
+
   bannerImg: {
     width: "100%",
     height: "100%",

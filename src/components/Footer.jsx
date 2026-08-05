@@ -21,7 +21,7 @@ const Footer = () => {
                 <img src={logo} className="w-[85px] h-[40px]" alt="logo" />
                 <span className="flex flex-col">
                   <h3 className="xl:text-[26px] text-[26px] lg:text-[16px] font-[600] font-[Poppins]">Muzamil Hussain</h3>
-                  <p className="xl:text-[11px] lg:text-[9px] text-[11px] font-[400] font-[Poppins] text-[var(--color-primary)]">Junior MERN Stack Developer</p>
+                  <p className="xl:text-[11px] lg:text-[9px] text-[11px] font-[400] font-[Poppins] text-[var(--color-primary)]">AI-Driven Full-Stack Developer (MERN)</p>
                 </span>
 
               </h1>

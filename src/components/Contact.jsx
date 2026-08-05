@@ -8,12 +8,12 @@ import { SiLeetcode } from "react-icons/si";
 const Contact = () => {
   return (
     <section id="contact" className="bg-[var(--color-background)] py-16">
-      <div className="max-w-[1638px] mx-auto px-6 md:px-16 grid md:grid-cols-2 gap-12 items-start">
+      <div className="max-w-[1638px] mx-auto px-4 md:px-16 grid md:grid-cols-2 gap-12 items-start">
 
         {/* --- Left: Contact Form (No Changes) --- */}
         <ScrollReveal direction="left">
           <div
-            className="bg-[var(--color-surface)] p-8 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 
+            className="bg-[var(--color-surface)] p-5 md:p-8 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 
                        transition-all duration-300"
           >
             <h2 className="text-3xl font-bold mb-6 text-gradient-animated">Get in Touch</h2>
@@ -41,7 +41,7 @@ const Contact = () => {
               </div>
               <div className="flex items-center space-x-3 text-[var(--color-text-secondary)]">
                 <Phone className="w-6 h-6 text-[var(--color-primary)]" />
-                <span className="text-gradient-static">+92 303-0458064</span>
+                <a href="tel:+923030458064" className="text-gradient-static">+92 303-0458064</a>
               </div>
             </div>
 
