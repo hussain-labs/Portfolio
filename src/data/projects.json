@@ -7,7 +7,7 @@
         "overview": "Independently developed custom portfolio websites for corporate clients and individuals at CallBackCrew. Built responsive, high-performance interfaces using React.js and Tailwind CSS. Delivered modern UI/UX with reusable components and optimized performance.",
         "company": "CallBackCrew",
         "live": "https://muzamilhussain.netlify.app/",
-        "image": "/images/projects/portfolios/portfolio.png",
+        "image": "/images/projects/portfolios/Electrronics store and mainttenence.png",
         "tech": [
             "React.js",
             "Next.js",
@@ -21,25 +21,33 @@
         ],
         "subProjects": [
             {
-                "name": "Portfolio One",
-                "image": "",
-                "live": "#"
+                "name": "Architecture Designer",
+                "image": "/images/projects/portfolios/Architecture Designer.png",
+                "live": "https://arzainabusama.netlify.app/"
             },
             {
-                "name": "Portfolio Two",
-                "image": "",
-                "live": "#"
+                "name": "Electronics Shop",
+                "image": "/images/projects/portfolios/Electronics shop.png",
+                "live": "https://itguy.ae/"
             },
             {
-                "name": "Portfolio Three",
-                "image": "",
-                "live": "#"
+                "name": "Electronics Store & Maintenance",
+                "image": "/images/projects/portfolios/Electrronics store and mainttenence.png",
+                "live": "http://coralplus.ae/"
+            },
+            {
+                "name": "Graphic Designer",
+                "image": "/images/projects/portfolios/Grraphic designer.png",
+                "live": "https://sidrashareef.netlify.app/"
             }
         ],
         "link": "#",
         "images": [
             "/images/projects/portfolios/portfolio.png",
-            "/images/projects/portfolios/portfolio.png"
+            "/images/projects/portfolios/Architecture Designer.png",
+            "/images/projects/portfolios/Electronics shop.png",
+            "/images/projects/portfolios/Electrronics store and mainttenence.png",
+            "/images/projects/portfolios/Grraphic designer.png"
         ]
     },
     {
@@ -66,7 +74,9 @@
         "link": "#",
         "images": [
             "/images/projects/keystrokes/keystrrokes.png",
-            "/images/projects/keystrokes/keystrrokes.png"
+            "/images/projects/keystrokes/1.png",
+            "/images/projects/keystrokes/2.png",
+            "/images/projects/keystrokes/3.png"
         ]
     },
     {
@@ -209,7 +219,13 @@
         "link": "#",
         "images": [
             "/images/projects/inzaar/inzaar.png",
-            "/images/projects/inzaar/inzaar-1.png"
+            "/images/projects/inzaar/admin.png",
+            "/images/projects/inzaar/admincalender.png",
+            "/images/projects/inzaar/inzaar-1.png",
+            "/images/projects/inzaar/profile.png",
+            "/images/projects/inzaar/student.png",
+            "/images/projects/inzaar/studentonadmin.png",
+            "/images/projects/inzaar/support.png"
         ]
     }
 ]
