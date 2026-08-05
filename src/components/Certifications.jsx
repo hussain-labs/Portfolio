@@ -22,33 +22,40 @@ const Certifications = () => {
               className="group"
             >
               <div className="bg-[var(--color-surface)] p-6 rounded-xl shadow-md border border-[var(--color-surface)]
-                              hover:shadow-[0_0_20px_rgba(59,130,246,0.15)] hover:border-[#3b82f6]/30 
-                              hover:-translate-y-2 transition-all duration-500 h-full flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center gap-4 mb-4">
-                    <span className="flex items-center justify-center w-12 h-12 bg-[#3b82f6]/10 rounded-full text-[#3b82f6] group-hover:scale-110 group-hover:bg-[#3b82f6] group-hover:text-[#0A0C10] transition-all duration-300">
-                      <Award className="w-6 h-6" />
-                    </span>
-                    <h3 className="text-xl font-bold text-[var(--color-text-primary)] group-hover:text-[#3b82f6] transition-colors duration-300">
-                      {cert.name}
-                    </h3>
+                               hover:shadow-[0_0_20px_rgba(59,130,246,0.15)] hover:border-[#3b82f6]/30 
+                               hover:-translate-y-2 transition-all duration-500 h-full flex flex-col overflow-hidden">
+                {cert.image && (
+                  <div className="w-full h-48 mb-6 overflow-hidden rounded-lg flex-shrink-0">
+                    <img src={cert.image} alt={cert.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   </div>
-                  <p className="text-sm font-semibold text-gray-400 mb-6 uppercase tracking-widest">
-                    {cert.issuer}
-                  </p>
+                )}
+                <div className="flex-1 flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center gap-4 mb-4">
+                      <span className="flex items-center justify-center w-12 h-12 bg-[#3b82f6]/10 rounded-full text-[#3b82f6] group-hover:scale-110 group-hover:bg-[#3b82f6] group-hover:text-[#0A0C10] transition-all duration-300 shrink-0">
+                        <Award className="w-6 h-6" />
+                      </span>
+                      <h3 className="text-xl font-bold text-[var(--color-text-primary)] group-hover:text-[#3b82f6] transition-colors duration-300">
+                        {cert.name}
+                      </h3>
+                    </div>
+                    <p className="text-sm font-semibold text-gray-400 mb-6 uppercase tracking-widest">
+                      {cert.issuer}
+                    </p>
+                  </div>
+                  
+                  <a
+                    href={cert.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-auto inline-flex items-center gap-2 text-sm font-bold text-[#3b82f6] hover:text-white transition-colors duration-300 w-fit"
+                  >
+                    View Certificate
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="transform -rotate-45 group-hover:rotate-0 transition-transform duration-300">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                  </a>
                 </div>
-                
-                <a
-                  href={cert.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-auto inline-flex items-center gap-2 text-sm font-bold text-[#3b82f6] hover:text-white transition-colors duration-300"
-                >
-                  View Certificate
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="transform -rotate-45 group-hover:rotate-0 transition-transform duration-300">
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
-                </a>
               </div>
             </ScrollReveal>
           ))}
