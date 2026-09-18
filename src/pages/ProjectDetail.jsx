@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import projects from "../data/projects.json";
 import Navbar from "../components/Navbar";
@@ -78,6 +79,12 @@ const ProjectDetail = () => {
 
   return (
     <div style={styles.page}>
+      <Helmet>
+        <title>{project.name} | Web3 & RAG Project | Muzamil Hussain</title>
+        <meta name="description" content={project.desc || project.overview} />
+        <meta name="keywords" content={`Muzamil Hussain, ${project.name}, ${project.tech ? project.tech.join(', ') : ''}, RAG project, Web3 project, Full Stack Development`} />
+        <link rel="canonical" href={`https://muzamilhussain.netlify.app/project/${project.id}`} />
+      </Helmet>
       {/* ── animated background blobs ── */}
       <div style={styles.blob1} />
       <div style={styles.blob2} />
